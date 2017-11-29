@@ -16,6 +16,8 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <Fabric><DefaultButton>I am a button.</DefaultButton></Fabric>
+        <span className="ms-font-su ms-fontColor-themePrimary">Big blue text</span>
+        <i className="ms-Icon ms-Icon--Mail" aria-hidden="true"></i>
       </div>
     );
   }

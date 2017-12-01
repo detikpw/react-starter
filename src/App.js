@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Fabric } from 'office-ui-fabric-react/lib/Fabric';
-import { DefaultButton } from 'office-ui-fabric-react/lib/Button';
 import logo from './logo.svg';
 import './App.css';
 
@@ -15,7 +13,6 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <Fabric><DefaultButton>I am a button.</DefaultButton></Fabric>
       </div>
     );
   }

@@ -1,10 +1,10 @@
-import { evolve } from 'ramda';
+import { evolve, __ } from 'ramda';
 
 function registerValidSW(swUrl) {
   navigator.serviceWorker
     .register(swUrl)
     .then((registration) => {
-      evolve(null, registration)({
+      evolve(__, registration)({
         onupdatefound: () => {
           const installingWorker = registration.installing;
           installingWorker.onstatechange = () => {

@@ -4,8 +4,16 @@ import { connect } from 'react-redux';
 import Todo from './Todo.react';
 import * as actions from '../actions/todo';
 
+import type { Todos } from '../type/todos';
 
-const TodoList = ({ todos, toggleTodo, addTodo }) => {
+type Props = {
+  todos: Todos,
+  toggleTodo: actions.toggleTodo,
+  addTodo: actions.addTodo,
+}
+
+
+const TodoList = ({ todos, toggleTodo, addTodo }: Props) => {
   const onSubmit = (event) => {
     const input = event.target;
     const text = input.value;

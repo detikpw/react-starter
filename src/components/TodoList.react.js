@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Text } from 'rebass';
 
-import Todo from './Todo.react';
 import * as actions from '../actions/todo';
 
 import type { Todos } from '../type/todos';
@@ -40,13 +40,7 @@ const TodoList = ({ todos, toggleTodo, addTodo }: Props) => {
       />
       <ul className="todo__list">
         {todoList.map(t => (
-          <li
-            key={t.id}
-            className="todo__item"
-            onClick={toggleClick(t.id)}
-          >
-            <Todo todo={t} />
-          </li>
+          <Text key={t.id} bold={t.isDone} onClick={toggleClick(t.id)}>{t.text}</Text>
         ))}
       </ul>
     </div>

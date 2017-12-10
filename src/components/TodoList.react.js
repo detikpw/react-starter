@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import Todo from './Todo';
+import Todo from './Todo.react';
 import * as actions from '../actions/todo';
+
 
 const TodoList = ({ todos, toggleTodo, addTodo }) => {
   const onSubmit = (event) => {

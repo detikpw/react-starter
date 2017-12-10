@@ -6,7 +6,7 @@ type DefaultPayload = {
 
 type AddTodoAction = {
   +type: 'ADD_TODO',
-  +payload: DefaultPayload & {
+  +payload: {
     text: string
   }
 }
@@ -16,14 +16,9 @@ type ToggleTodoAction = {
   +payload: DefaultPayload
 }
 
-const uid = ():string => Math.random().toString(34).slice(2);
-
 export const addTodo = (text: string): AddTodoAction => ({
   type: 'ADD_TODO',
-  payload: {
-    text,
-    id: uid(),
-  },
+  payload: { text },
 });
 
 export const toggleTodo = (id: string): ToggleTodoAction => ({
